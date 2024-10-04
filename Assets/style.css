@@ -1,0 +1,232 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EAEAEA;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+header input {
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  height: 5.4vh;
+}
+header input:focus {
+  outline: none;
+}
+header input::placeholder {
+  color: #353535;
+  opacity: 1;
+}
+header .header-input {
+  display: flex;
+  align-items: center;
+}
+header i {
+  font-size: 1.05em;
+  color: #353535;
+}
+
+.header-background {
+  padding-top: 10px;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 5vh;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(53, 53, 53);
+  color: rgb(255, 255, 255);
+  padding-left: 6%;
+  font-size: 16px;
+}
+footer img {
+  padding-top: 2.2em;
+  filter: brightness(0) invert(1);
+  width: 7em;
+  height: auto;
+}
+footer i {
+  margin-right: 4%;
+}
+
+body {
+  display: flex;
+  font-family: Roboto;
+  min-width: 320px;
+  max-width: 768px;
+  margin: 0 auto;
+  flex-direction: column;
+  background-color: rgb(246, 246, 246);
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.reservation {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.2em;
+}
+.reservation div {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.reservation h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.reservation p {
+  font-size: 18px;
+  margin-bottom: 1.9em;
+}
+.reservation button {
+  margin-bottom: 3em;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding-right: 1.2em;
+  padding-left: 1.2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 25px;
+  border: none;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+  background-color: rgb(255, 255, 255);
+  padding-top: 1.2em;
+  padding-bottom: 4em;
+}
+.fonctionnement h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-left: 5%;
+}
+.fonctionnement figure {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+  align-items: center;
+  margin: 0;
+}
+.fonctionnement figcaption {
+  background: rgb(246, 246, 246);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-radius: 20px;
+  border: none;
+  width: 73%;
+  text-align: center;
+  position: relative;
+}
+.fonctionnement span {
+  color: white;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.6em;
+  border-radius: 50%;
+  font-weight: 500;
+  background-color: rgb(147, 86, 220);
+  position: absolute;
+  right: 96%;
+}
+.fonctionnement i {
+  font-size: 1.2em;
+  padding-right: 1em;
+  color: rgb(126, 126, 126);
+}
+.fonctionnement .i_purple {
+  color: rgb(147, 86, 220);
+}
+
+.restaurant {
+  padding: 2rem 1rem;
+  position: relative;
+}
+.restaurant div {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant div a {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  overflow: hidden;
+  height: 251px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.restaurant div a img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+.restaurant div a .restaurant-nouveau {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #99E2D0;
+  color: rgb(0, 135, 102);
+  padding: 6px 13px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.restaurant div a .restaurant-flex {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant div a .restaurant-flex i {
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: 1em;
+}
+.restaurant div a .restaurant-flex .restaurant-padding {
+  padding: 1rem;
+}
+.restaurant div a .restaurant-flex h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.restaurant div a .restaurant-flex p {
+  margin: 0;
+  font-size: 17px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,71 @@
+@mixin center-text {
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@mixin button {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    padding-right: 1.2em;
+    padding-left: 1.2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 25px;
+    border: none;
+}
+@mixin button_Fonctionnement {
+  background: rgba(246, 246, 246, 1);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-radius: 20px;
+  border: none;
+  width: 73%;
+  text-align: center;
+  position: relative;
+}
+
+@mixin number {
+  color: white;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.6em;
+  border-radius: 50%;
+  font-weight: 500;  
+  background-color: $primary-color ;
+  position: absolute;
+  right: 96%;
+}
+@mixin card_menu {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  overflow: hidden;
+  height: 251px;
+  margin-bottom: 15px;
+  position: relative;
+}
+@mixin nouveau_logo {
+position: absolute;
+top: 15px;
+right: 15px;
+background: $color-tertiary;
+color: rgba(0, 135, 102, 1);;
+padding: 6px 13px;
+font-size: 14px;
+font-weight: 500;
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
