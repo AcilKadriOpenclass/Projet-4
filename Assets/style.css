@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   display: flex;
   flex-direction: column;
@@ -230,6 +231,77 @@ header .header-icons_goback {
   pointer-events: none;
 }
 
+@media (min-width: 1024px) {
+  /* Conteneur du cœur */
+  .heart-container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .heart-container input {
+    display: none;
+  }
+  /* Style principal du cœur */
+  .heart {
+    position: relative;
+    display: inline-block;
+    /* Cœur vide (le contour) */
+    /* Cœur plein, légèrement plus grand */
+  }
+  .heart .fa-regular {
+    font-size: 50px;
+    color: black;
+  }
+  .heart .fa-solid {
+    font-size: 53px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: linear-gradient(to right, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  /* Quand le checkbox est coché, on fait apparaître le cœur plein */
+  .heart-container input:checked + .heart .fa-solid {
+    opacity: 1;
+  }
+}
+.heart-container {
+  display: inline-block;
+  cursor: pointer;
+}
+.heart-container input {
+  display: none;
+}
+
+.heart {
+  position: relative;
+  display: inline-block;
+  padding-right: 1em;
+}
+.heart .fa-regular {
+  font-size: 25px;
+  color: black;
+}
+.heart .fa-solid {
+  font-size: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  background: linear-gradient(to right, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.heart-container input:checked + .heart .fa-solid {
+  opacity: 1;
+}
+
 body {
   display: flex;
   font-family: Roboto;
@@ -379,11 +451,6 @@ body:hover {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-.restaurant div a .restaurant-flex i {
-  font-size: 1.5em;
-  margin-left: auto;
-  margin-right: 1em;
 }
 .restaurant div a .restaurant-flex .restaurant-padding {
   padding: 1rem;
@@ -666,10 +733,22 @@ body:hover {
     font-size: 17px;
   }
   /*Page ici*/
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 240px;
+  }
+  .image-container img {
+    width: 100%;
+    height: 275px;
+    display: block;
+    object-fit: cover;
+  }
   .menu-section {
     max-width: 1055px;
     margin: auto;
-    top: -40px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .menu-section .div-space {
     margin-bottom: 50px;
