@@ -541,10 +541,19 @@ body:hover {
 .menu-section .menu-section_cards div {
   display: flex;
   flex-direction: column;
-  flex: 1;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.menu-section .menu-section_cards div i {
+  color: white;
+  font-size: 1.5vh;
+  background-color: #99E2D0;
+  padding: 30px 20px 30px 20px;
+  transform: translateX(60px);
+}
+.menu-section .menu-section_cards div i:hover {
+  transform: translateX(0px);
 }
 .menu-section .menu-section_cards h3, .menu-section .menu-section_cards h4 {
   margin: 4px;
@@ -555,10 +564,9 @@ body:hover {
 }
 .menu-section .menu-section_cards p {
   margin-top: auto;
-  margin-right: 2%;
-  align-items: flex-end;
-  bottom: 0px;
-  right: 13px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 .menu-section .button-position {
   display: flex;
