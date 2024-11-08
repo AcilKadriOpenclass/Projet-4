@@ -237,9 +237,6 @@ header .header-icons_goback {
     display: inline-block;
     cursor: pointer;
   }
-  .heart-container input {
-    display: none;
-  }
   /* Style principal du cœur */
   .heart {
     position: relative;
@@ -252,7 +249,7 @@ header .header-icons_goback {
     color: black;
   }
   .heart .fa-solid {
-    font-size: 53px;
+    font-size: 50px;
     position: absolute;
     top: 0;
     left: 0;
@@ -263,17 +260,15 @@ header .header-icons_goback {
     opacity: 0;
     transition: opacity 1s ease-in-out;
   }
-  /* Quand le checkbox est coché, on fait apparaître le cœur plein */
-  .heart-container input:checked + .heart .fa-solid {
+  /* Apparition du cœur plein au survol */
+  .heart-container:hover .fa-solid {
     opacity: 1;
   }
 }
+/* Styles pour les écrans plus petits */
 .heart-container {
   display: inline-block;
   cursor: pointer;
-}
-.heart-container input {
-  display: none;
 }
 
 .heart {
@@ -295,13 +290,20 @@ header .header-icons_goback {
   -webkit-background-clip: text;
   background-clip: text;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.heart-container input:checked + .heart .fa-solid {
-  opacity: 1;
+/* Animation d'apparition */
+@keyframes affichage {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
 body {
   display: flex;
   font-family: Roboto;
@@ -526,9 +528,8 @@ body:hover {
   font-size: 15px;
 }
 .menu-section .menu-section_cards {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   gap: 10px;
   background-color: white;
@@ -537,23 +538,14 @@ body:hover {
   overflow: hidden;
   height: 69px;
   margin-bottom: 10px;
+  padding-right: 3rem;
 }
-.menu-section .menu-section_cards div {
-  display: flex;
-  flex-direction: column;
+.menu-section .menu-section_cards > div:first-child {
+  margin-right: auto;
+  max-width: 60%;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
-}
-.menu-section .menu-section_cards div i {
-  color: white;
-  font-size: 1.5vh;
-  background-color: #99E2D0;
-  padding: 30px 20px 30px 20px;
-  transform: translateX(60px);
-}
-.menu-section .menu-section_cards div i:hover {
-  transform: translateX(0px);
+  white-space: nowrap;
 }
 .menu-section .menu-section_cards h3, .menu-section .menu-section_cards h4 {
   margin: 4px;
@@ -563,10 +555,42 @@ body:hover {
   overflow: hidden;
 }
 .menu-section .menu-section_cards p {
-  margin-top: auto;
+  font-weight: 700;
+  margin-bottom: auto;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
   margin-left: auto;
+  transition: transform 0.3s ease;
+  margin-right: -2rem;
+}
+.menu-section .menu-section_cards .logo {
+  position: absolute;
+  top: 50%;
+  right: -3rem;
+  transform: translateY(-50%);
+  height: 5rem;
+  background-color: aquamarine;
+  display: flex;
+  padding-right: 20px;
+  padding-left: 15px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.menu-section .menu-section_cards .logo i {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+.menu-section .menu-section_cards:hover p {
+  transform: translateX(-3rem);
+}
+.menu-section .menu-section_cards:hover .logo {
+  right: 0%;
+  opacity: 1;
 }
 .menu-section .button-position {
   display: flex;

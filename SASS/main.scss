@@ -23,9 +23,6 @@ body {
   }
 }
 
-main {
-}
-
 // Partie Réserver avec explorer //
 
 .reservation {
@@ -192,9 +189,8 @@ main {
     font-size: 15px;
   }
   .menu-section_cards {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     gap: 10px;
     background-color: white;
@@ -203,37 +199,69 @@ main {
     overflow: hidden;
     height: 69px;
     margin-bottom: 10px;
-      div {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-        i {
-          color: white;
-          font-size: 1.5vh;
-          background-color: $color-tertiary;
-          padding: 30px 20px 30px 20px;
-          transform: translateX(60px);
-        }
-        i:hover {
-          transform: translateX(0px);
-        }
-      }
-      h3, h4 {
+    padding-right: 3rem; // Ajoute de l'espace à droite pour le logo et le prix
+
+    > div:first-child {
+        margin-right: auto;
+        max-width: 60%; // Limite la largeur du texte pour laisser de l'espace au prix
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    h3, h4 {
         margin: 4px;
         padding-left: 10px;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-      }
-      p {
-        margin-top: auto;
+    }
+
+    p {
+        font-weight: 700;
+        margin-bottom: auto;
         display: flex;
-        align-items: center;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: .5rem;
         margin-left: auto;
-      }
-  }
+        transition: transform 0.3s ease;
+        margin-right: -2rem;
+    }
+
+    .logo {
+        position: absolute;
+        top: 50%;
+        right: -3rem;
+        transform: translateY(-50%);
+        height: 5rem;
+        background-color: aquamarine;
+        display: flex;
+        padding-right: 20px;
+        padding-left: 15px;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+
+        i {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+    }
+
+    &:hover {
+        p {
+            transform: translateX(-3rem);
+        }
+
+        .logo {
+            right: 0%;
+            opacity: 1;
+        }
+    }
+}
   .button-position {
     display: flex;
     justify-content: center;

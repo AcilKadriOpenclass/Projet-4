@@ -1,89 +1,80 @@
 @media (min-width: 1024px) {
-/* Conteneur du cœur */
+    /* Conteneur du cœur */
+    .heart-container {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    /* Style principal du cœur */
+    .heart {
+        position: relative;
+        display: inline-block;
+
+        /* Cœur vide (le contour) */
+        .fa-regular {
+            font-size: 50px;
+            color: black;
+        }
+
+        /* Cœur plein, légèrement plus grand */
+        .fa-solid {
+            font-size: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: transparent;
+            background: linear-gradient(to right, #9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            background-clip: text;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    }
+
+    /* Apparition du cœur plein au survol */
+    .heart-container:hover .fa-solid {
+        opacity: 1;
+    }
+}
+
+/* Styles pour les écrans plus petits */
 .heart-container {
     display: inline-block;
     cursor: pointer;
-
-    input {
-        display: none;
-    }
 }
-
-/* Style principal du cœur */
-.heart {
-    position: relative; 
-    display: inline-block; 
-
-    /* Cœur vide (le contour) */
-    .fa-regular {
-        font-size: 50px; 
-        color: black; 
-    }
-
-    /* Cœur plein, légèrement plus grand */
-    .fa-solid {
-        font-size: 53px; 
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        color: transparent; 
-        background: linear-gradient(to right,#9356DC, #FF79DA);
-        -webkit-background-clip: text; 
-        background-clip: text; 
-        opacity: 0; 
-        transition: opacity 1s ease-in-out; 
-    }
-}
-
-/* Quand le checkbox est coché, on fait apparaître le cœur plein */
-.heart-container input:checked + .heart .fa-solid {
-    opacity: 1; 
-}
-}
-
-.heart-container {
-    display: inline-block;
-    cursor: pointer;
-
-    input {
-        display: none;
-    }
-}
-
 
 .heart {
-    position: relative; 
+    position: relative;
     display: inline-block;
     padding-right: 1em;
 
-
     .fa-regular {
-        font-size: 25px; 
+        font-size: 25px;
         color: black;
     }
 
-
     .fa-solid {
         font-size: 26px;
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        color: transparent; 
-        background: linear-gradient(to right,#9356DC, #FF79DA);
-        -webkit-background-clip: text; 
-        background-clip: text; 
-        opacity: 0; 
-        transition: opacity 1s ease-in-out; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: transparent;
+        background: linear-gradient(to right, #9356DC, #FF79DA);
+        -webkit-background-clip: text;
+        background-clip: text;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
     }
 }
 
-
-.heart-container input:checked + .heart .fa-solid {
-    opacity: 1; 
-}
-
-
-
-.menu-section_cards {
-    
+/* Animation d'apparition */
+@keyframes affichage {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
