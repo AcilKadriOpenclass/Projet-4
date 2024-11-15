@@ -67,14 +67,15 @@ body {
       font-weight: 700;
       padding-left: 5%;
     }
-    figure {
+    ol {
       display: flex;
       flex-direction: column;
       gap: 1.1em;
       align-items: center;
       margin: 0;
+      list-style: none;
     }
-    figcaption {
+    li {
       @include button_Fonctionnement;
     }
     span {
@@ -199,11 +200,11 @@ body {
     overflow: hidden;
     height: 69px;
     margin-bottom: 10px;
-    padding-right: 3rem; // Ajoute de l'espace à droite pour le logo et le prix
+    padding-right: 3rem;
 
     > div:first-child {
         margin-right: auto;
-        max-width: 60%; // Limite la largeur du texte pour laisser de l'espace au prix
+        max-width: 60%;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -318,15 +319,16 @@ body {
         font-weight: 700;
         margin-left: 5%;
       }
-      figure {
+      ol {
         display: flex;
         flex-direction: row;
         gap: 1.1em;
         align-items: center;
         margin-left: 10%;
-        margin-right: 10%
+        margin-right: 10%;
+        list-style: none;
       }
-      figcaption {
+      li {
         @include button_Fonctionnement;
       }
       span {
@@ -459,7 +461,7 @@ body {
 
     > div:first-child {
         margin-right: auto;
-        max-width: 60%;
+        max-width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -499,7 +501,6 @@ body {
         justify-content: center;
         opacity: 0;
         transition: all 0.3s ease;
-
         i {
             color: white;
             font-size: 1.2rem;
